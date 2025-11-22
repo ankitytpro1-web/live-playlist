@@ -1,0 +1,96 @@
+name: Generate Playlist
+
+on:
+  schedule:
+    - cron: "0 */7 * * *"   # Every 7 hours
+  workflow_dispatch:        # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create hidden PHP generator
+        run: |
+          cat > generator.php << 'EOF'
+<?php
+header("Content-Type: audio/x-mpegurl; charset=UTF-8");
+header("Content-Disposition: inline; filename=playlist.m3u");
+
+// API endpoints
+$api = "https://livetv-hub.cricindia95.workers.dev/channel.json";
+$cookie_api = "https://cookie.cricindia95.workers.dev";
+
+// Fetch channel JSON
+$data = @file_get_contents($api);
+if (!$data) {
+    echo "#EXTM3U\n# Error: Failed to fetch channel API\n";
+    exit;
+}
+
+$json = json_decode($data, true);
+if (!is_array($json)) {
+    echo "#EXTM3U\n# Error: Invalid channel JSON\n";
+    exit;
+}
+
+// Fetch cookie
+$cookie = trim(@file_get_contents($cookie_api));
+if (!$cookie) {
+    $cookie = "";
+}
+
+// Playlist header
+echo "#EXTM3U x-tvg-url=\"https://avkb.short.gy/jioepg.xml.gz\"\n";
+echo "#DATE: " . date("l d F, Y H:i:s") . "\n\n";
+
+// Loop channels
+foreach ($json as $c) {
+
+    $tvg_id      = $c["tvg-id"] ?? "";
+    $group       = $c["group-title"] ?? "Others";
+    $logo        = $c["tvg-logo"] ?? "";
+    $name        = $c["channel-name"] ?? "Unknown";
+    $licenseKey  = $c["license_key"] ?? "";
+    $mpd         = $c["mpd_url"] ?? "";
+
+    // DRM block
+    if (!empty($licenseKey)) {
+        echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";
+        echo "#KODIPROP:inputstream.adaptive.license_key={$licenseKey}\n";
+    }
+
+    // EXTHTTP cookie header
+    echo "#EXTHTTP:{\"cookie\":\"$cookie\"}\n";
+
+    // Build final MPD URL format
+    $encoded_cookie = urlencode("|cookie=$cookie");
+
+    $final_url =
+        $mpd .
+        "?__hdnea__=$cookie" .
+        "&xxx=" . $encoded_cookie;
+
+    // EXTINF channel details
+    echo "#EXTINF:-1 tvg-id=\"$tvg_id\" tvg-logo=\"$logo\" group-title=\"$group\",$name\n";
+    echo $final_url . "\n\n";
+}
+?>
+EOF
+
+      - name: Run generator
+        run: php generator.php > playlist.m3u
+
+      - name: Commit playlist.m3u
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add playlist.m3u
+          git commit -m "Auto-update playlist" || echo "No changes to commit"
+          git push
