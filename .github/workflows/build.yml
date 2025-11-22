@@ -35,6 +35,9 @@ jobs:
 
           echo '$clean = str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
 
+          # CATEGORY REMOVAL ADDED
+          echo '$skipCats=["Business News","Devotional","Educational"];' >> generator.php
+
           echo 'echo "#EXTM3U x-tvg-url=\"https://avkb.short.gy/jioepg.xml.gz\"\n";' >> generator.php
           echo 'echo "#DATE: ".date("l d F, Y H:i:s")."\n\n";' >> generator.php
 
@@ -46,9 +49,11 @@ jobs:
           echo '$key=$c["license_key"]??"";' >> generator.php
           echo '$url=$c["mpd_url"]??"";' >> generator.php
 
+          # APPLY CATEGORY FILTER
+          echo 'if(in_array($grp,$skipCats)) continue;' >> generator.php
+
           echo 'echo "#EXTINF:-1 tvg-id=\"$id\" group-title=\"$grp\" tvg-logo=\"$logo\",$name\n";' >> generator.php
           echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
-
 
           #######################
           #  SONYLIV HANDLING   #
@@ -62,7 +67,6 @@ jobs:
           echo '}' >> generator.php
           echo '}' >> generator.php
           echo '}' >> generator.php
-
 
           ###################
           #   JIO CHANNELS  #
@@ -80,7 +84,6 @@ jobs:
           echo 'echo $final."\n\n";' >> generator.php
           echo 'continue;' >> generator.php
           echo '}' >> generator.php
-
 
           ########################
           #   OTHER CHANNELS     #
