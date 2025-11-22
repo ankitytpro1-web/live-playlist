@@ -26,13 +26,13 @@ jobs:
           echo '$json=@json_decode(@file_get_contents($api),true);' >> generator.php
           echo 'if(!is_array($json)){echo "#EXTM3U\n# Error";exit;}' >> generator.php
 
-          echo '$cookie=trim(@file_get_contents($cookie_api));' >> generator.php
-          echo 'if(!$cookie)$cookie="";' >> generator.php
+          echo '$cookie_raw=trim(@file_get_contents($cookie_api));' >> generator.php
+          echo 'if(!$cookie_raw)$cookie_raw="";' >> generator.php
 
-          # CLEAN cookie only for URL, NOT for header
-          echo '$clean=str_replace("__hdnea__=","",$cookie);' >> generator.php
+          # REMOVE "__hdnea__=" PREFIX
+          echo '$clean = str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
 
-          echo 'echo "#EXTM3U"\n;' >> generator.php
+          echo 'echo "#EXTM3U x-tvg-url=\"https://avkb.short.gy/jioepg.xml.gz\"\n";' >> generator.php
           echo 'echo "#DATE: ".date("l d F, Y H:i:s")."\n\n";' >> generator.php
 
           echo 'foreach($json as $c){' >> generator.php
@@ -43,27 +43,27 @@ jobs:
           echo '$key=$c["license_key"]??"";' >> generator.php
           echo '$url=$c["mpd_url"]??"";' >> generator.php
 
-          echo 'echo "#EXTINF:-1 tvg-id=\"$id\" group-title=\"$grp\" tvg-logo=\"$logo\",$name\n";' >> generator.php
-          echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)\n";' >> generator.php
+          echo 'echo "#EXTINF:-1 tvg-id=\"{$id}\" group-title=\"{$grp}\" tvg-logo=\"{$logo}\",{$name}\n";' >> generator.php
+          echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
 
-          # Jio URLs need cookie + DRM
+          # Case: JIO MPD URL
           echo 'if(strpos($url,"jiotvpllive")!==false || strpos($url,"bpk-tv")!==false){' >> generator.php
 
           echo 'if(!empty($key)){' >> generator.php
           echo 'echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";' >> generator.php
-          echo 'echo "#KODIPROP:inputstream.adaptive.license_key=$key\n";' >> generator.php
+          echo 'echo "#KODIPROP:inputstream.adaptive.license_key={$key}\n";' >> generator.php
           echo '}' >> generator.php
 
-          # EXTHTTP uses raw cookie
-          echo 'echo "#EXTHTTP:{\"cookie\":\"$cookie\"}\n";' >> generator.php
+          echo 'echo "#EXTHTTP:{\"cookie\":\"$cookie_raw\"}\n";' >> generator.php
 
-          # Final URL (PERFECT FORMAT)
-          echo '$final = $url . "?__hdnea__=" . $clean . "&xxx=%7Ccookie=" . $cookie;' >> generator.php
+          # BUILD CLEAN URL
+          echo '$final=$url."?__hdnea__=".$clean."&xxx=%7Ccookie=__hdnea__=".$clean;' >> generator.php
 
           echo 'echo $final."\n\n";' >> generator.php
           echo 'continue;' >> generator.php
           echo '}' >> generator.php
 
+          # NON-JIO = CLEAN
           echo 'echo $url."\n\n";' >> generator.php
           echo '}' >> generator.php
 
