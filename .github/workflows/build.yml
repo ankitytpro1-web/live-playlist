@@ -16,73 +16,80 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Create generator.php
+      - name: Create generator
         run: |
           echo '<?php' > generator.php
 
-          echo '$api = "https://livetv-hub.cricindia95.workers.dev/channel.json";' >> generator.php
-          echo '$cookie_api = "https://cookie.cricindia95.workers.dev";' >> generator.php
-          echo '$sliv_api = "https://github.com/cricindia/sliv/raw/refs/heads/main/sliv.json";' >> generator.php
+          echo '$api="https://livetv-hub.cricindia95.workers.dev/channel.json";' >> generator.php
+          echo '$cookie_api="https://cookie.cricindia95.workers.dev";' >> generator.php
+          echo '$sliv_api="https://github.com/cricindia/sliv/raw/refs/heads/main/sliv.json";' >> generator.php
 
-          echo '$json = json_decode(@file_get_contents($api), true);' >> generator.php
-          echo 'if (!is_array($json)) { echo "#EXTM3U\n# Error loading channels"; exit; }' >> generator.php
+          echo '$json=@json_decode(@file_get_contents($api),true);' >> generator.php
+          echo 'if(!is_array($json)){echo "#EXTM3U\n# Error";exit;}' >> generator.php
 
-          echo '$sliv = json_decode(@file_get_contents($sliv_api), true);' >> generator.php
-          echo 'if (!is_array($sliv)) $sliv = []; ' >> generator.php
+          echo '$sliv=@json_decode(@file_get_contents($sliv_api),true);' >> generator.php
+          echo 'if(!is_array($sliv)) $sliv=[];' >> generator.php
 
-          echo '$cookie_raw = trim(@file_get_contents($cookie_api));' >> generator.php
-          echo 'if (!$cookie_raw) $cookie_raw = "";' >> generator.php
+          echo '$cookie_raw=trim(@file_get_contents($cookie_api));' >> generator.php
+          echo 'if(!$cookie_raw)$cookie_raw="";' >> generator.php
 
-          echo '$clean = str_replace("__hdnea__=", "", $cookie_raw);' >> generator.php
+          echo '$clean = str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
 
-          echo 'echo "#EXTM3U x-tvg-url=\\"https://avkb.short.gy/jioepg.xml.gz\\"\n";' >> generator.php
-          echo 'echo "#DATE: " . date("l d F, Y H:i:s") . "\n\n";' >> generator.php
+          echo 'echo "#EXTM3U x-tvg-url=\"https://avkb.short.gy/jioepg.xml.gz\"\n";' >> generator.php
+          echo 'echo "#DATE: ".date("l d F, Y H:i:s")."\n\n";' >> generator.php
 
-          echo 'foreach ($json as $c) {' >> generator.php
+          echo 'foreach($json as $c){' >> generator.php
+          echo '$id=$c["tvg-id"]??"";' >> generator.php
+          echo '$grp=$c["group-title"]??"Others";' >> generator.php
+          echo '$logo=$c["tvg-logo"]??"";' >> generator.php
+          echo '$name=$c["channel-name"]??"Unknown";' >> generator.php
+          echo '$key=$c["license_key"]??"";' >> generator.php
+          echo '$url=$c["mpd_url"]??"";' >> generator.php
 
-          echo '$id   = $c["tvg-id"] ?? "";' >> generator.php
-          echo '$grp  = $c["group-title"] ?? "Others";' >> generator.php
-          echo '$logo = $c["tvg-logo"] ?? "";' >> generator.php
-          echo '$name = $c["channel-name"] ?? "Unknown";' >> generator.php
-          echo '$key  = $c["license_key"] ?? "";' >> generator.php
-          echo '$url  = $c["mpd_url"] ?? "";' >> generator.php
-
-          echo 'echo "#EXTINF:-1 tvg-id=\\"" . $id . "\\" group-title=\\"" . $grp . "\\" tvg-logo=\\"" . $logo . "\\"," . $name . "\n";' >> generator.php
+          echo 'echo "#EXTINF:-1 tvg-id=\"$id\" group-title=\"$grp\" tvg-logo=\"$logo\",$name\n";' >> generator.php
           echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
 
-          # ---------- SONYLIV REPLACEMENT ----------
-          echo '$isSony = (strpos($url, "sonyliv") !== false || strpos(strtolower($name), "sony") !== false);' >> generator.php
-          echo 'if ($isSony) {' >> generator.php
-          echo 'foreach ($sliv as $s) {' >> generator.php
-          echo 'if (strtolower(trim($s["channel"])) == strtolower(trim($name))) {' >> generator.php
+
+          #######################
+          #  SONYLIV HANDLING   #
+          #######################
+          echo '$isSony = (strpos(strtolower($name),"sony")!==false || strpos($url,"sonyliv")!==false);' >> generator.php
+          echo 'if($isSony){' >> generator.php
+          echo 'foreach($sliv as $s){' >> generator.php
+          echo 'if(strtolower(trim($s["channel"])) == strtolower(trim($name))){' >> generator.php
           echo 'echo $s["link"] . "\n\n";' >> generator.php
           echo 'continue 2;' >> generator.php
           echo '}' >> generator.php
           echo '}' >> generator.php
           echo '}' >> generator.php
 
-          # ---------- JIO CHANNELS ----------
-          echo 'if (strpos($url, "jiotvpllive") !== false || strpos($url, "bpk-tv") !== false) {' >> generator.php
 
-          echo 'if (!empty($key)) {' >> generator.php
+          ###################
+          #   JIO CHANNELS  #
+          ###################
+          echo 'if(strpos($url,"jiotvpllive")!==false || strpos($url,"bpk-tv")!==false){' >> generator.php
+
+          echo 'if(!empty($key)){' >> generator.php
           echo 'echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";' >> generator.php
-          echo 'echo "#KODIPROP:inputstream.adaptive.license_key=" . $key . "\n";' >> generator.php
+          echo 'echo "#KODIPROP:inputstream.adaptive.license_key=$key\n";' >> generator.php
           echo '}' >> generator.php
 
           echo 'echo "#EXTHTTP:{\"cookie\":\"$cookie_raw\"}\n";' >> generator.php
 
-          echo '$final = $url . "?__hdnea__=" . $clean . "&xxx=%7Ccookie=__hdnea__=" . $clean;' >> generator.php
-          echo 'echo $final . "\n\n";' >> generator.php
+          echo '$final=$url."?__hdnea__=".$clean."&xxx=%7Ccookie=__hdnea__=".$clean;' >> generator.php
+          echo 'echo $final."\n\n";' >> generator.php
           echo 'continue;' >> generator.php
+          echo '}' >> generator.php
+
+
+          ########################
+          #   OTHER CHANNELS     #
+          ########################
+          echo 'echo $url."\n\n";' >> generator.php
 
           echo '}' >> generator.php
 
-          # ---------- OTHER CHANNELS ----------
-          echo 'echo $url . "\n\n";' >> generator.php
-
-          echo '}' >> generator.php
-
-      - name: Run generator.php
+      - name: Run generator
         run: php generator.php > playlist.m3u
 
       - name: Commit playlist
@@ -90,5 +97,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add playlist.m3u
-          git commit -m "Auto update playlist" || echo "No changes"
+          git commit -m "Auto update" || echo "No changes"
           git push
