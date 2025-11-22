@@ -20,18 +20,27 @@ jobs:
         run: |
           echo '<?php' > generator.php
 
+          # Main APIs
           echo '$api="https://livetv-hub.cricindia95.workers.dev/channel.json";' >> generator.php
+          echo '$sonyliv_api="https://github.com/cricindia/sliv/raw/refs/heads/main/sliv.json";' >> generator.php
           echo '$cookie_api="https://cookie.cricindia95.workers.dev";' >> generator.php
 
+          # Fetch main channel list
           echo '$json=@json_decode(@file_get_contents($api),true);' >> generator.php
           echo 'if(!is_array($json)){echo "#EXTM3U\n# Error";exit;}' >> generator.php
 
+          # Fetch SonyLiv list
+          echo '$sliv=@json_decode(@file_get_contents($sonyliv_api),true);' >> generator.php
+          echo 'if(!is_array($sliv)) $sliv=[];' >> generator.php
+
+          # Fetch cookie for Jio streams
           echo '$cookie_raw=trim(@file_get_contents($cookie_api));' >> generator.php
           echo 'if(!$cookie_raw)$cookie_raw="";' >> generator.php
 
-          # REMOVE "__hdnea__=" PREFIX
-          echo '$clean = str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
+          # Clean cookie for Jio query
+          echo '$clean=str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
 
+          # Playlist header
           echo 'echo "#EXTM3U x-tvg-url=\"https://avkb.short.gy/jioepg.xml.gz\"\n";' >> generator.php
           echo 'echo "#DATE: ".date("l d F, Y H:i:s")."\n\n";' >> generator.php
 
@@ -43,27 +52,37 @@ jobs:
           echo '$key=$c["license_key"]??"";' >> generator.php
           echo '$url=$c["mpd_url"]??"";' >> generator.php
 
-          echo 'echo "#EXTINF:-1 tvg-id=\"{$id}\" group-title=\"{$grp}\" tvg-logo=\"{$logo}\",{$name}\n";' >> generator.php
+          # Detect SonyLiv channel
+          echo '$is_sonyliv = (strpos($url,"sonyliv")!==false || strpos($url,"sony")!==false);' >> generator.php
+
+          # EXTINF
+          echo 'echo "#EXTINF:-1 tvg-id=\"$id\" group-title=\"$grp\" tvg-logo=\"$logo\",$name\n";' >> generator.php
+
+          # VLC User-Agent
           echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
 
-          # Case: JIO MPD URL
+          # SONYLIV CASE
+          echo 'if($is_sonyliv){' >> generator.php
+          echo 'foreach($sliv as $s){' >> generator.php
+          echo 'if(strtolower(trim($s["channel"]))==strtolower(trim($name))){' >> generator.php
+          echo 'echo $s["link"]."\n\n"; continue 2;' >> generator.php
+          echo '}}' >> generator.php
+
+          # JIO CASE
           echo 'if(strpos($url,"jiotvpllive")!==false || strpos($url,"bpk-tv")!==false){' >> generator.php
 
           echo 'if(!empty($key)){' >> generator.php
           echo 'echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";' >> generator.php
-          echo 'echo "#KODIPROP:inputstream.adaptive.license_key={$key}\n";' >> generator.php
+          echo 'echo "#KODIPROP:inputstream.adaptive.license_key=$key\n";' >> generator.php
           echo '}' >> generator.php
 
           echo 'echo "#EXTHTTP:{\"cookie\":\"$cookie_raw\"}\n";' >> generator.php
 
-          # BUILD CLEAN URL
           echo '$final=$url."?__hdnea__=".$clean."&xxx=%7Ccookie=__hdnea__=".$clean;' >> generator.php
-
-          echo 'echo $final."\n\n";' >> generator.php
-          echo 'continue;' >> generator.php
+          echo 'echo $final."\n\n"; continue;' >> generator.php
           echo '}' >> generator.php
 
-          # NON-JIO = CLEAN
+          # NON-JIO NON-SONY (default)
           echo 'echo $url."\n\n";' >> generator.php
           echo '}' >> generator.php
 
