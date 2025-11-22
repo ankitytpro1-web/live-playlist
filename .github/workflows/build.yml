@@ -20,24 +20,21 @@ jobs:
         run: |
           echo '<?php' > generator.php
 
-          # Main APIs
           echo '$api="https://livetv-hub.cricindia95.workers.dev/channel.json";' >> generator.php
-          echo '$sonyliv_api="https://github.com/cricindia/sliv/raw/refs/heads/main/sliv.json";' >> generator.php
           echo '$cookie_api="https://cookie.cricindia95.workers.dev";' >> generator.php
+          echo '$sliv_api="https://github.com/cricindia/sliv/raw/refs/heads/main/sliv.json";' >> generator.php
 
-          # Fetch main channel list
+          # Fetch main channels
           echo '$json=@json_decode(@file_get_contents($api),true);' >> generator.php
-          echo 'if(!is_array($json)){echo "#EXTM3U\n# Error";exit;}' >> generator.php
+          echo 'if(!is_array($json)){echo "#EXTM3U\n# Error loading main API";exit;}' >> generator.php
 
-          # Fetch SonyLiv list
-          echo '$sliv=@json_decode(@file_get_contents($sonyliv_api),true);' >> generator.php
+          # Fetch SonyLiv channels
+          echo '$sliv=@json_decode(@file_get_contents($sliv_api),true);' >> generator.php
           echo 'if(!is_array($sliv)) $sliv=[];' >> generator.php
 
-          # Fetch cookie for Jio streams
+          # Fetch cookie for Jio
           echo '$cookie_raw=trim(@file_get_contents($cookie_api));' >> generator.php
           echo 'if(!$cookie_raw)$cookie_raw="";' >> generator.php
-
-          # Clean cookie for Jio query
           echo '$clean=str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
 
           # Playlist header
@@ -45,6 +42,7 @@ jobs:
           echo 'echo "#DATE: ".date("l d F, Y H:i:s")."\n\n";' >> generator.php
 
           echo 'foreach($json as $c){' >> generator.php
+
           echo '$id=$c["tvg-id"]??"";' >> generator.php
           echo '$grp=$c["group-title"]??"Others";' >> generator.php
           echo '$logo=$c["tvg-logo"]??"";' >> generator.php
@@ -52,23 +50,20 @@ jobs:
           echo '$key=$c["license_key"]??"";' >> generator.php
           echo '$url=$c["mpd_url"]??"";' >> generator.php
 
-          # Detect SonyLiv channel
-          echo '$is_sonyliv = (strpos($url,"sonyliv")!==false || strpos($url,"sony")!==false);' >> generator.php
-
           # EXTINF
           echo 'echo "#EXTINF:-1 tvg-id=\"$id\" group-title=\"$grp\" tvg-logo=\"$logo\",$name\n";' >> generator.php
-
-          # VLC User-Agent
           echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
 
-          # SONYLIV CASE
-          echo 'if($is_sonyliv){' >> generator.php
+          # ------- SONYLIV CHANNEL DETECT -------
+          echo '$isSony = (strpos($url,"sonyliv")!==false || strpos(strtolower($name),"sony")!==false);' >> generator.php
+
+          echo 'if($isSony){' >> generator.php
           echo 'foreach($sliv as $s){' >> generator.php
-          echo 'if(strtolower(trim($s["channel"]))==strtolower(trim($name))){' >> generator.php
+          echo 'if(strtolower(trim($s["channel"])) == strtolower(trim($name))){' >> generator.php
           echo 'echo $s["link"]."\n\n"; continue 2;' >> generator.php
           echo '}}' >> generator.php
 
-          # JIO CASE
+          # ------- JIO CHANNELS -------
           echo 'if(strpos($url,"jiotvpllive")!==false || strpos($url,"bpk-tv")!==false){' >> generator.php
 
           echo 'if(!empty($key)){' >> generator.php
@@ -82,7 +77,7 @@ jobs:
           echo 'echo $final."\n\n"; continue;' >> generator.php
           echo '}' >> generator.php
 
-          # NON-JIO NON-SONY (default)
+          # ------- OTHERS CLEAN -------
           echo 'echo $url."\n\n";' >> generator.php
           echo '}' >> generator.php
 
