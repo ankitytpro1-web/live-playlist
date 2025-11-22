@@ -19,6 +19,7 @@ jobs:
       - name: Create generator
         run: |
           echo '<?php' > generator.php
+
           echo '$api="https://livetv-hub.cricindia95.workers.dev/channel.json";' >> generator.php
           echo '$cookie_api="https://cookie.cricindia95.workers.dev";' >> generator.php
 
@@ -37,27 +38,35 @@ jobs:
           echo '$logo=$c["tvg-logo"]??"";' >> generator.php
           echo '$name=$c["channel-name"]??"Unknown";' >> generator.php
           echo '$key=$c["license_key"]??"";' >> generator.php
-          echo '$mpd=$c["mpd_url"]??"";' >> generator.php
+          echo '$url=$c["mpd_url"]??"";' >> generator.php
 
-          # EXTINF must come FIRST
+          # EXTINF FIRST
           echo 'echo "#EXTINF:-1 tvg-id=\"{$id}\" group-title=\"{$grp}\" tvg-logo=\"{$logo}\",{$name}\n";' >> generator.php
 
-          # DRM tags
+          # USER AGENT ALWAYS
+          echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
+
+          # CASE 1: JIO MPD (needs cookie + DRM)
+          echo 'if(strpos($url,"jiotvpllive")!==false || strpos($url,"bpk-tv")!==false){' >> generator.php
+
+          # DRM
           echo 'if(!empty($key)){' >> generator.php
           echo 'echo "#KODIPROP:inputstream.adaptive.license_type=clearkey\n";' >> generator.php
           echo 'echo "#KODIPROP:inputstream.adaptive.license_key={$key}\n";' >> generator.php
           echo '}' >> generator.php
 
-          # User agent
-          echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
-
-          # EXTHTTP cookie
+          # EXTHTTP Cookie
           echo 'echo "#EXTHTTP:{\"cookie\":\"$cookie\"}\n";' >> generator.php
 
-          # Build final URL
-          echo '$final=$mpd."?__hdnea__=".$cookie."&xxx=%7Ccookie=".$cookie;' >> generator.php
+          # BUILD CLEAN URL (NO duplicate __hdnea__)
+          echo '$final=$url."?__hdnea__=".$cookie."&xxx=%7Ccookie=".$cookie;' >> generator.php
 
           echo 'echo $final."\n\n";' >> generator.php
+          echo 'continue;' >> generator.php
+          echo '}' >> generator.php
+
+          # CASE 2: NON-JIO URL (clean output, NO cookie)
+          echo 'echo $url."\n\n";' >> generator.php
           echo '}' >> generator.php
 
       - name: Run generator
