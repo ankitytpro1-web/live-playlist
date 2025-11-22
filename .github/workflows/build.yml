@@ -35,8 +35,10 @@ jobs:
 
           echo '$clean=str_replace("__hdnea__=","",$cookie_raw);' >> generator.php
 
+          # CATEGORY FILTER FIXED
           echo '$skipCats=["Business News","Devotional","Educational"];' >> generator.php
 
+          # FIXED QUOTES HERE
           echo 'echo "#EXTM3U x-tvg-url=\\"https://avkb.short.gy/jioepg.xml.gz\\"\n";' >> generator.php
           echo 'echo "#DATE: ".date("l d F, Y H:i:s")."\n\n";' >> generator.php
 
@@ -49,12 +51,17 @@ jobs:
           echo '$key=$c["license_key"]??"";' >> generator.php
           echo '$url=$c["mpd_url"]??"";' >> generator.php
 
+          # SKIP CATEGORY
           echo 'if(in_array($grp,$skipCats)) continue;' >> generator.php
 
           echo 'echo "#EXTINF:-1 tvg-id=\\"" . $id . "\\" group-title=\\"" . $grp . "\\" tvg-logo=\\"" . $logo . "\\"," . $name . "\n";' >> generator.php
           echo 'echo "#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0\n";' >> generator.php
 
-          echo '$isSony=(strpos(strtolower($name),"sony")!==false);' >> generator.php
+
+          #######################
+          #  SONYLIV HANDLING   #
+          #######################
+          echo '$isSony=(strpos(strtolower($name),"sony")!==false || strpos($url,"sonyliv")!==false);' >> generator.php
           echo 'if($isSony){' >> generator.php
           echo 'foreach($sliv as $s){' >> generator.php
           echo 'if(strtolower(trim($s["channel"]))==strtolower(trim($name))){' >> generator.php
@@ -63,6 +70,10 @@ jobs:
           echo '}' >> generator.php
           echo '}}' >> generator.php
 
+
+          ###################
+          #   JIO CHANNELS  #
+          ###################
           echo 'if(strpos($url,"jiotvpllive")!==false || strpos($url,"bpk-tv")!==false){' >> generator.php
 
           echo 'if(!empty($key)){' >> generator.php
@@ -70,13 +81,18 @@ jobs:
           echo 'echo "#KODIPROP:inputstream.adaptive.license_key=" . $key . "\n";' >> generator.php
           echo '}' >> generator.php
 
+          # FIX JSON QUOTING
           echo 'echo "#EXTHTTP:{\\"cookie\\":\\"$cookie_raw\\"}\n";' >> generator.php
 
           echo '$final=$url."?__hdnea__=".$clean."&xxx=%7Ccookie=__hdnea__=".$clean;' >> generator.php
-          echo 'echo $final . "\n\n"; continue;' >> generator.php
+          echo 'echo $final."\n\n"; continue;' >> generator.php
           echo '}' >> generator.php
 
-          echo 'echo $url . "\n\n";' >> generator.php
+
+          ###################
+          # OTHER CHANNELS  #
+          ###################
+          echo 'echo $url."\n\n";' >> generator.php
           echo '}' >> generator.php
 
       - name: Run generator
