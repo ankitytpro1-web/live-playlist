@@ -2,8 +2,8 @@ name: Generate Playlist
 
 on:
   schedule:
-    - cron: "0 */7 * * *"   # Every 7 hours
-  workflow_dispatch:        # Manual trigger
+    - cron: "0 */7 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -87,10 +87,10 @@ EOF
       - name: Run generator
         run: php generator.php > playlist.m3u
 
-      - name: Commit playlist.m3u
+      - name: Commit playlist
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add playlist.m3u
-          git commit -m "Auto-update playlist" || echo "No changes to commit"
+          git commit -m "Auto-update playlist" || echo "No changes"
           git push
