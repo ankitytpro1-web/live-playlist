@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
-#DATE: Saturday 22 November, 2025 15:19:50
+#DATE: Saturday 22 November, 2025 15:28:48
 
 #EXTINF:-1 tvg-id="1132" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus_HD.png",Star Plus HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
@@ -60,8 +60,12 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Plus_BTS/output/index.mpd?__hdnea__=
 
 #EXTINF:-1 tvg-id="291" group-title="Entertainment" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_HD.png",Sony HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2011671/SETHD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="1146" group-title="Entertainment" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Marathi_SD.png",Sony Marathi
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="474" group-title="Entertainment" tvg-logo="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Pal.png",Sony Pal
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
@@ -101,10 +105,12 @@ https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/master.m3u8?hdnea=exp=1763
 
 #EXTINF:-1 tvg-id="483" group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_MAX2.png",Sony MAX 2
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
-https://dishmt.slivcdn.com/hls/live/2011908/MAX2/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
 
 #EXTINF:-1 tvg-id="1393" group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Wah.png",Sony WHA
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="1389" group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_PIX_HD.png",Sony PIX HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
@@ -834,14 +840,27 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Loksabha_TV_BTS/output/index.mpd?__hdnea_
 
 #EXTINF:-1 tvg-id="514" group-title="Sports" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_1.png",Sony Ten 1
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="523" group-title="Sports" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_2.png",Sony Ten 2
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=671ce7c8ccc95e0a95cba0d12831d12e:175d284c9647b6feb379e7c1650a4f82
+#EXTHTTP:{"cookie":"__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20"}
+https://jiotvpllive.cdn.jio.com/bpk-tv/Ten_2_MOB/WDVLive/index.mpd?__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20&xxx=%7Ccookie=__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20
+
 #EXTINF:-1 tvg-id="892" group-title="Sports" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_3.png",Sony Ten 3
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="1774" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_SD_Logo_CLR.png",Sony Ten 4
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="1775" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_SD_Logo_CLR.png",Sony Ten 5
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="525" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ID.png",Investigation Discovery
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -851,14 +870,24 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/ID_BTS/output/index.mpd?__hdnea__=st=1763
 
 #EXTINF:-1 tvg-id="162" group-title="Sports" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten_HD.png",Sony Ten 1 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="891" group-title="Sports" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten2_HD.png",Sony Ten 2 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="892" group-title="Sports" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Ten3_HD.png",Sony Ten 3 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="1773" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png",Sony Ten 4 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="155" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png",Sony Ten 5 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/master.m3u8?hdnea=exp=1763847001~acl=/*~id=36932694585933174099693724888875~hmac=98e43f6ba03039018eb980098a9c5d76a765fa0a6b6352ceec053aa7ba1b3f9b
+
 #EXTINF:-1 tvg-id="528" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/DD_India.png",DD India
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -3400,6 +3429,11 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Studio_Yuva_Alpha_BTS/output/index.mpd?__
 
 #EXTINF:-1 tvg-id="1804" group-title="News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Jan_Setu_TV.png",Jan Setu News
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=255baebc77b152ae925555090e33d948:40062a841160d6e7b344b17bc1318efb
+#EXTHTTP:{"cookie":"__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20"}
+https://jiotvpllive.cdn.jio.com/bpk-tv/Jan_Setu_TV_BTS/output/index.mpd?__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20&xxx=%7Ccookie=__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20
+
 #EXTINF:-1 tvg-id="1817" group-title="News" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/NEWS_24_MPCG.png",NEWS 24 MPCG
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/69.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1763814294~exp=1763900694~acl=/*~hmac=04512a9b1fe0dc266f0c933941510e82f746562ebb79a50f1596f73553e8fe20"}
