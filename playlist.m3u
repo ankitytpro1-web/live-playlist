@@ -1,5 +1,7 @@
+#EXTM3U billed-msg="Updated: 26-11-2025 01:55:49 AM | Expire: 26-11-2025 05:55:49 AM"
+#EXTM3U refresh="4"
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
-#DATE: Tuesday 25 November, 2025 17:30:42
+#DATE: 26-11-2025 01:55:49 AM
 
 #EXTINF:-1 tvg-id="1132" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus_HD.png",Star Plus HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
@@ -3906,91 +3908,91 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/One_Paschima_BTS/output/index.mpd?__hdnea
 
 #EXTINF:-1 tvg-id="" group-title="Entertainment" tvg-logo="https://sonypicturesnetworks.com/images/logos/SET-LOGO-HD.png",SET HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011671/SETHD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011671/SETHD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Entertainment" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20SAB%20HD_WHITE.png",Sony SAB HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011749/SABHD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011749/SABHD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Entertainment" tvg-logo="https://sonypicturesnetworks.com/images/logos/Sony_MARATHI.png",Sony Marathii
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011740/SonyMarathi/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Entertainment" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20PAL.png",Sony Pal
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011741/SonyPalSD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Entertainment" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20AATH.png",Sony Aath
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011641/SonyAathSD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY%20YAY.png",Sony Yay
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011746/SonyYaySD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://sonypicturesnetworks.com/images/logos/Sony_MAX-HD_WHITE.png",Sony MAX HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011670/SonyMaxhd/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Sony_Max_SD.png",Sony MAX
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011745/SonyMaxSD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_MAX2.png",Sony MAX 2
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011908/MAX2/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011908/MAX2/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://sonypicturesnetworks.com/images/logos/Sony_WAH.png",Sony WAH
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011906/SonyWah/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://sonypicturesnetworks.com/images/logos/PIX%20HD_WHITE.png",Sony PIX HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011748/PIXHD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Infotainment" tvg-logo="https://sonypicturesnetworks.com/images/logos/SBBCE_LOGO_NEW_PNG.png",Sony BBC Earth HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011907/SonyBBCEarthHD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen1_SD_Logo_CLR.png",Sony Sports Ten 1
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2011739/TEN1SD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen2_SD_Logo_CLR.png",Sony Sports Ten 2
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020590/TEN2SD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen3_SD_Logo_CLR.png",Sony Sports Ten 3
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020592/TEN3SD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png",Sony Sports Ten 4
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020437/ten4sd/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png",Sony Sports Ten 5
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen1_HD_Logo_CLR.png",Sony Sports Ten 1 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com//hls/live/2011747/TEN1HD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com//hls/live/2011747/TEN1HD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen2_HD_Logo_CLR.png",Sony Sports Ten 2 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020434/TEN2HD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020434/TEN2HD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://sonypicturesnetworks.com/images/logos/SONY_SportsTen3_HD_Logo_CLR.png",Sony Sports Ten 3 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen4_HD_Logo_CLR.png",Sony Sports Ten 4 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020589/ten4hd/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020589/ten4hd/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 #EXTINF:-1 tvg-id="" group-title="Sports" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png",Sony Sports Ten 5 HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
-https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/master.m3u8?hdnea=exp=1764117002~acl=/*~id=63142630439729745625387845818900~hmac=77673a8427f1a8cb92d73023c2df7ce8b4addc399609a919b53179672666601b
+https://dishmt.slivcdn.com/hls/live/2020593/SONYSIXHD/master.m3u8?hdnea=exp=1764127800~acl=/*~id=10383975634022684399792127945342~hmac=efe1869e12ca20bbe2e49a9ad612335657c88b2c98c5a83ed6b393570f4c1d63
 
 
 # ================= ZEE5 ORIGINAL FORMAT (FILTERED) ================
@@ -4163,8 +4165,8 @@ https://port.denver1769.fun/Star69/147724.m3u8
 #EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqX2w_cbA8fvaTUqf6Ac4eH7zYtnfFBG0IF96x2KPKw&s=10",Doraemon (Dhoom)
 http://dhoomtv.xyz/live/P4B9TB9xR8/humongous2tonight/147746.ts
 
-#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqX2w_cbA8fvaTUqf6Ac4eH7zYtnfFBG0IF96x2KPKw&s=10",Doraemon (Denver)
-https://port.denver1769.fun/Star69/147746.m3u8
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqX2w_cbA8fvaTUqf6Ac4eH7zYtnfFBG0IF96x2KPKw&s=10",Doraemon (Tplay)
+https://live20.bozztv.com/giatvplayout7/giatv-209902/tracks-v1a1/mono.ts.m3u8
 
 #EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/88/CartoonNetworkHDLogo.png/revision/latest?cb=20221009224934",Cartoon Network HD+
 http://dhoomtv.xyz/live/P4B9TB9xR8/humongous2tonight/8.ts
@@ -4207,4 +4209,13 @@ https://fusion4k.wasmer.app/getlink/2043
 
 #EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwMYpJMEvIKMC-UMhfTFMaC0wAhFcdeyl5Ne1QylPgQ&s",Doraemon (Rana)
 https://fifabdm.xyz/OPPLEX/RANAPK/play.php?id=388459
+
+#EXTINF:-1 tvg-id="" group-title="Songs" tvg-logo="",English Songs 24/7
+https://live20.bozztv.com/giatvplayout7/giatv-209901/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwiq41a1QrnxvIa-E9Car1wxL-vNOtj-Zu5w&s",Oggy 24/7
+https://live20.bozztv.com/giatvplayout7/giatv-210728/tracks-v1a1/mono.ts.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Kids 24/7" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGiXnM240ZZxzNqSXuicFVH01L2s1FpJNH4WeTVqs4DC_75GIK2_6Y60M&s",Shinchan (kick.com)
+https://aps32.playlist.live-video.net/v1/playlist/CoYGmtt9Znnsj3lIv6bb9U9KcOw9JXQcHTW8uBYaFHrHHhV46Cuo-YIJbbAuDtuo1hFx9dfSA0qaCgURiBqL4c7KgQaiBRIT81DA4XIclAqSfRTratSx0uDNf9Eo4vmEClNPEvAB-iZGT63VcMp9R5ek1_CfCksVccLPMV3yh3cH0lMGkzxvtGhu2Rfy6VWwzZGLeUCod4kQpCdxPQCq8pAAcDjHCZyZSLzeBueXbJBLVjZHHBbkriijIn5f0CBkBBbtSW_jSOP9NdbvVyV-FtA_WUH-qzHevFWeRkM4dPoARqTb_9Dj8nXcJPm6TN_pzo_7RBIoORbjwq2M5J_qyG7vgjrJ66zeY4BxknJ5F1ETV5KsR1JIc_7ROoxlFTpXTTZh1qCXKWL5vJvTz7ZtjzoIFMQlxmrxNEoUSQ5i7lgWEkKIPB2uE_mMcfahCi3Et3FRJ1pnedr1Px9roeGbc3eLlnGgh38Gsx2ic8a3v1BtTDPPeqIJKAyMbMIbGTwdmPyi4YB_R3oT9_EUTJ_WYcdKDJk2wGPDHm6WUBkCoL6nsyckhr-uFrgiyI1NGFHfVip1ouZ0zCJEfUxX9JyK5wH0gqbhszHlwwhy8PdhirZdRY6nZi8ssZwc3skbAgFxBkjjalNqeyXmlsjiU7w8QvDt083j1wS6UQk8hTUuQRPkp4gA-3Xu93K7vbDdYm-2v4Rp3MQerF5VLfFJGwVkEMRB1say_yMwiKP3B5DESsJi-U2nhmuYIdKiAU-xv3pPPLXWvSSdc7MrlIhFLMd1XC8-jt2xRBMfnpnSiTVB6N62XnmPPYb0_wCnZ_TRRzEcjXOY-ZkbAgz-gd2bgKrOx08ac5CGQvPaZuz0T22ztw1fmnQ_wrgP_rMb-ivLOFEyOkUsroQ88ZROwY2gFwo3qW6rPhQdQRognc3SNPMWVKwD_J3gHC-j3W7FZv0vhocxwSvgeO890Z_LZu3oEC1RNVlD1VraXysdlgQHBVToc0FQFMlg50env_nt1uA-pOLgBfr17YyUo8JZGgzPPVSeZO1kFywhroAgASoJdXMtd2VzdC0yMOUN.m3u8
 
