@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
-#DATE: Tuesday 25 November, 2025 05:28:31
+#DATE: Tuesday 25 November, 2025 09:31:12
 
 #EXTINF:-1 tvg-id="1132" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus_HD.png",Star Plus HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
@@ -4146,7 +4146,59 @@ https://z5ak-cmaflive.zee5.com/cmaf/live/2105513/ZeeZestHDELE/index-connected.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 ygx/69.1 Safari/537.36
 https://z5ak-cmaflive.zee5.com/cmaf/live/2105260/ZeeBanglaELE/master.m3u8?hdntl=exp=1764120502~acl=%2f*~id=abd0532e-b69c-4bd2-a66f-a21881d00e4b~data=hdntl~hmac=a804d588b3097f4794182002742d72bb00803aae0e645aba784118c41a640439
 
-#EXTINF:-1 tvg-id="" group-title="TESTING" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6oIkh51mGBnGh_KrG10F-n8ixYXM_UMwTSmhc6s_KpuFUCRMBaJyloM&s",Sony sab sd
+#EXTINF:-1 tvg-id="" group-title="TESTING" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6oIkh51mGBnGh_KrG10F-n8ixYXM_UMwTSmhc6s_KpuFUCRMBaJyloM&s",Sony sab SD
 #EXTVLCOPT:http-user-agent=okhttp/4.12.1
 https://allottplay.com/tv/toffee/live.php?id=sonysab_hd&format=.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="TESTING" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6oIkh51mGBnGh_KrG10F-n8ixYXM_UMwTSmhc6s_KpuFUCRMBaJyloM&s",Sony sab SD (yoxeh)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10)
+https://toffee.yoxeh59833.workers.dev/live.php?id=sonysab_hd|Referer=https://toffee-01x.pages.dev/&Origin=https://toffee-01x.pages.dev&User-Agent=Mozilla/5.0 (Linux; Android 10) 
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://static.wikia.nocookie.net/crayonshinchan/images/3/36/Logo_slogan.png/revision/latest/scale-to-width-down/920?cb=20180305065258",ShinChan (Dhoom)
+http://dhoomtv.xyz/live/P4B9TB9xR8/humongous2tonight/147724.ts
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://static.wikia.nocookie.net/crayonshinchan/images/3/36/Logo_slogan.png/revision/latest/scale-to-width-down/920?cb=20180305065258",ShinChan (Denver)
+https://port.denver1769.fun/Star69/147724.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqX2w_cbA8fvaTUqf6Ac4eH7zYtnfFBG0IF96x2KPKw&s=10",Doraemon (Dhoom)
+http://dhoomtv.xyz/live/P4B9TB9xR8/humongous2tonight/147746.ts
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqX2w_cbA8fvaTUqf6Ac4eH7zYtnfFBG0IF96x2KPKw&s=10",Doraemon (Denver)
+https://port.denver1769.fun/Star69/147746.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/88/CartoonNetworkHDLogo.png/revision/latest?cb=20221009224934",Cartoon Network HD+
+http://dhoomtv.xyz/live/P4B9TB9xR8/humongous2tonight/8.ts
+
+#EXTINF:-1 tvg-id="" group-title="Kids" tvg-logo="https://www.animationxpress.com/wp-content/uploads/2020/11/gubbare-logo-1-01.jpg",Gubbare
+https://epiconvh.akamaized.net/live/gubbare/master.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zhornights.png",Zee Horror
+https://amg00862-amg00862c7-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c7-amgplt0173/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Infotainment" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SBBCE_LOGO_NEW_PNG.png",Sony BBC Earth HD (XC)
+http://116.90.120.149:8000/play/a0j1/index.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Infotainment" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/56/Animal_Planet_HD_2018.svg/revision/latest?cb=20190715053535",Animal Planet HD
+http://116.90.120.149:8000/play/a0hv/index.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zcomedynation.png",Zee Comedy Nation
+https://amg00862-amg00862c5-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c5-amgplt0173/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zsouthflix.png",Zee South Flix
+https://amg00862-amg00862c9-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c9-amgplt0173/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://d3bd0tgyk368z1.cloudfront.net/zeelg/LG%20logo%20artwork/400x200/zcinecla.png",Zee Cine Classic
+https://amg00862-amg00862c8-amgplt0173.playout.now3.amagi.tv/playlist/amg00862-amg00862c8-amgplt0173/playlist.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://core.freetvindia.com/media/channels/9005123451000604.png",Goldmines Movies
+https://origin1.freetvindia.com/live/GoldminesMovies.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://core.freetvindia.com/media/channels/9005123451000243.png",Goldmines
+https://origin1.freetvindia.com/live/GoldMines.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="Movies" tvg-logo="https://core.freetvindia.com/media/channels/9005123451000658.png",Goldmines bollywood
+https://origin1.freetvindia.com/live/GOLDMINESBOLLYWOOD.m3u8
+
+#EXTINF:-1 tvg-id="" group-title="TESTING" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN6oIkh51mGBnGh_KrG10F-n8ixYXM_UMwTSmhc6s_KpuFUCRMBaJyloM&s",Sony sab SD (TEST)
+http://103.182.170.32:8888/play/a03r
 
