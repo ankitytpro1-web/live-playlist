@@ -1,7 +1,7 @@
-#EXTM3U billed-msg="Updated: 27-11-2025 09:57:53 PM | Expire: 28-11-2025 01:57:53 AM"
+#EXTM3U billed-msg="Updated: 28-11-2025 01:52:21 AM | Expire: 28-11-2025 05:52:21 AM"
 #EXTM3U refresh="4"
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
-#DATE: 27-11-2025 09:57:53 PM
+#DATE: 28-11-2025 01:52:21 AM
 
 #EXTINF:-1 tvg-id="1132" group-title="Entertainment" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus_HD.png",Star Plus HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13)
